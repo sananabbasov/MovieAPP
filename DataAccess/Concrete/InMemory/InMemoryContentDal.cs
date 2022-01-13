@@ -1,5 +1,6 @@
 ﻿using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -48,6 +49,11 @@ namespace DataAccess.Concrete.InMemory
         public List<Content> GetAllByCategory(int categoryId)
         {
             return _contents.Where(post => post.ContentCategories.All(tag=>tag.CategoryId == categoryId)).ToList();
+        }
+
+        public List<HomeContentsDto> GetMovieDetail(string lang)
+        {
+            throw new NotImplementedException();
         }
 
         public void Update(Content content)

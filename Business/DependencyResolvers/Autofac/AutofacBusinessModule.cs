@@ -31,8 +31,14 @@ namespace Business.DependencyResolvers.Autofac
             builder.RegisterType<FilmManager>().As<IFilmService>();
             builder.RegisterType<EfFilmDal>().As<IFilmDal>();
 
+            builder.RegisterType<CommentManager>().As<ICommentService>();
+            builder.RegisterType<EfCommentDal>().As<ICommentDal>();
+
             builder.RegisterType<ContentManager>().As<IContentService>();
             builder.RegisterType<EfContentDal>().As<IContentDal>();
+
+            builder.RegisterType<FilmToCommentManager>().As<IFilmToCommentService>();
+            builder.RegisterType<EfFilmToCommentDal>().As<IFilmToCommentDal>();
 
             builder.RegisterType<UserManager>().As<IUserService>();
             builder.RegisterType<EfUserDal>().As<IUserDal>();

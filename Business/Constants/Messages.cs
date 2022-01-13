@@ -18,5 +18,6 @@ namespace Business.Constants
         public static string AccessTokenCreated = "Access token created";
         public static string UserNotFound = "Access token created";
         internal static string FilmAdded = "Film added";
+        internal static string CommentAdded = "Comment added";
     }
 }

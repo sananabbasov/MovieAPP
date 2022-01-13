@@ -14,6 +14,7 @@ namespace DataAccess.Concrete.EntityFramework
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=MovieDB;Trusted_Connection=True;MultipleActiveResultSets=true");
+            //optionsBuilder.UseSqlServer(@"Data Source = SQL5109.site4now.net; Initial Catalog = db_a4f2ac_moviedb; User Id = db_a4f2ac_moviedb_admin; Password = Compar2022");
         }
 
 

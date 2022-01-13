@@ -1,4 +1,5 @@
 ﻿using Core.Entities.Concrete;
+using Core.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Entities.Concrete
 {
-    public class Comment
+    public class Comment : IEntity
     {
         public int Id { get; set; }
         public int UserId { get; set; }
