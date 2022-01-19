@@ -51,6 +51,16 @@ namespace DataAccess.Concrete.InMemory
             return _contents.Where(post => post.ContentCategories.All(tag=>tag.CategoryId == categoryId)).ToList();
         }
 
+        public List<MovieDetailDto> GetContentDetail(int id, string lang)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<ContentListDto> GetContentList(string lang)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<HomeContentsDto> GetMovieDetail(string lang)
         {
             throw new NotImplementedException();

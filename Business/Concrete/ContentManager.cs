@@ -12,7 +12,7 @@ namespace Business.Concrete
 {
     public class ContentManager : IContentService
     {
-        IContentDal _contentDal;
+        readonly IContentDal _contentDal;
         public ContentManager(IContentDal contentDal)
         {
             _contentDal = contentDal;
@@ -33,10 +33,27 @@ namespace Business.Concrete
             return _contentDal.GetAll(post => post.ContentCategories.All(tag => tag.CategoryId == categoryId));
         }
 
-        public List<ContentListDto> GetContentDetails()
+        public List<ContentListDto> GetContenstDetails()
         {
 
             
+            throw new NotImplementedException();
+        }
+
+        public List<MovieDetailDto> GetContentDetails(int id, string langs)
+        {
+            var result = _contentDal.GetContentDetail(id, langs);
+
+            return result;
+        }
+
+        public List<HomeContentsDto> GetFreeFilms(string lang)
+        {
+            return _contentDal.GetMovieDetail(lang);
+        }
+
+        public List<MovieDetailDto> GetSubscriberContentDetails(int id, string langs)
+        {
             throw new NotImplementedException();
         }
     }

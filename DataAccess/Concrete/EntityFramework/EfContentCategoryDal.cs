@@ -25,7 +25,7 @@ namespace DataAccess.Concrete.EntityFramework
 
 
                 var categories = context.Categories.Include(x=>x.CategoryLanguages).ToList();
-                var content = context.Contents.Include(x=>x.ContentCategories).ThenInclude(x=>x.Category).Include(x=>x.ContentType).Include(x=>x.ContentLanguages).ToList();
+                var content = context.Contents.Where(x=>x.IsFree == true).Include(x=>x.ContentCategories).ThenInclude(x=>x.Category).Include(x=>x.ContentType).Include(x=>x.ContentLanguages).ToList();
 
 
                 foreach (var item in content)
@@ -47,6 +47,7 @@ namespace DataAccess.Concrete.EntityFramework
                         Id  = item.Id,
                         Name = contentName,
                         Categories = cates,
+                        IsSlider = item.IsSlider,
                         Age = age,
                         PhotoUrl = image,
                         ContentType = contentType,

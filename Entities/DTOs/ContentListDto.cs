@@ -16,6 +16,7 @@ namespace Entities.DTOs
         public string Description { get; set; }
         public string PhotoUrl { get; set; }
         public string Age { get; set; }
+        public bool IsSlider { get; set; }
         public List<string> Categories { get; set; }
     }
 }

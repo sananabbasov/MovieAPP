@@ -12,5 +12,7 @@ namespace DataAccess.Abstract
     public interface IContentDal:IEntityRepository<Content>
     {
         List<HomeContentsDto> GetMovieDetail(string lang);
+        List<ContentListDto> GetContentList(string lang);
+        List<MovieDetailDto> GetContentDetail(int id, string lang);
     }
 }

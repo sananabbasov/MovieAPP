@@ -19,6 +19,7 @@ namespace Entities.Concrete
         public bool IsActive { get; set; }
         public bool IsDeleted { get; set; }
         public bool IsFeatured { get; set; }
+        public bool IsSlider { get; set; }
         public DateTime ModifiedOn { get; set; }
         public int ContentTypeId { get; set; }
         public virtual ContentType ContentType { get; set; }

@@ -60,7 +60,7 @@ namespace WebAPI
             //services.AddScoped<IAuthService, AuthManager>();
             //services.AddScoped<ITokenHelper, JwtHelper>();
 
-            
+            services.AddControllers().AddNewtonsoftJson();
 
             services.AddCors(options => {
                 options.AddPolicy(
@@ -69,8 +69,8 @@ namespace WebAPI
                         builder
                             .AllowAnyOrigin()
                             .AllowAnyMethod()
-                            .AllowAnyHeader();
-    
+                            .AllowAnyHeader()
+                            .WithMethods("PUT", "DELETE", "GET");
 
                     }
                         );

@@ -12,7 +12,9 @@ namespace Business.Abstract
     {
         List<Content> GetAll();
         List<Content> GetAllByCategoryById(int categoryId);
-
-        List<ContentListDto> GetContentDetails();
+        List<HomeContentsDto> GetFreeFilms(string lang);
+        List<ContentListDto> GetContenstDetails();
+        List<MovieDetailDto> GetContentDetails(int id, string langs);
+        List<MovieDetailDto> GetSubscriberContentDetails(int id, string langs);
     }
 }
